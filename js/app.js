@@ -10,7 +10,7 @@ import { Pet, PetTypes, States } from './pet.js';
 
 // Application state variables
 let currentPet = null;
-let updateInterval = null; 
+let updateInterval = null;
 const elements = {
   petDisplay: document.getElementById('pet-display'),
   statusDisplay: document.getElementById('status-display'),
@@ -91,7 +91,7 @@ function setupEventListeners() {
  * - Start the update cycle
  */
 function createNewPet() {
-  const type = elements.petSelector?.value || PetTypes;
+  const type = elements.petSelector?.value || PetTypes.COW; 
   let name = elements.nameInput?.value.trim() || '';
 
   if (!name) {
