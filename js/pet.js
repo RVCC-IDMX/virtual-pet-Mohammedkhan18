@@ -9,7 +9,8 @@ const PetTypes = {
   CAT: 'cat',
   DOG: 'dog',
   PARROT: 'parrot',
-  FISH: 'fish'
+  FISH: 'fish', 
+  COW: 'cow'
 };
 
 
