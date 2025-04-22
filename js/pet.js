@@ -9,8 +9,8 @@ const PetTypes = {
   CAT: 'cat',
   DOG: 'dog',
   PARROT: 'parrot',
-  FISH: 'fish', 
-  COW: 'cow'
+  FISH: 'fish',
+  FISH: 'cow'
 };
 
 
@@ -186,9 +186,9 @@ const petArt = {
  * Parameters should include type and name
  * Initialize properties for tracking mood, state, and timestamps
  */
-function Pet() {
+function Pet(name, type) {
   this.name = name || 'Bubblie';
-  this.type = type || PetTypes.COW;
+  this.type = type || PetTypes.FISH;
 
 
   this.moodLevel = 80;
@@ -352,7 +352,7 @@ Pet.prototype.getStatusMessage = function () {
  * Include speech bubble if the pet is speaking
  */
 Pet.prototype.updateAppearance = function () {
-  const typeArt = petArt[this.type] || petArt[PetTypes.COW];
+  const typeArt = petArt[this.type] || petArt[PetTypes.FISH];
   const art = typeArt[this.state] || typeArt[States.HAPPY];
 
   if (this.isSpeaking && this.speechText) {
